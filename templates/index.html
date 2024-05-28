@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Web Scraper</h1>
+    <form action="/scrape" method="post">
+        <label for="url">Website URL:</label>
+        <input type="text" id="url" name="url" required>
+        <br>
+        <label for="sheet_name">Google Sheet Name:</label>
+        <input type="text" id="sheet_name" name="sheet_name" required>
+        <br>
+        <input type="submit" value="Scrape">
+    </form>
+</body>
+</html>
+
