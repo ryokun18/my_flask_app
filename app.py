@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import os
 
 app = Flask(__name__)
 
@@ -39,5 +40,5 @@ def scrape():
     update_google_sheet(sheet_name, data)
     return 'Data has been successfully scraped and updated in Google Sheet.'
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
